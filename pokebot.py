@@ -8,9 +8,6 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 from robobrowser import RoboBrowser
 
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
-
-session = Session()
-session.proxies = {"https" : "https://188.166.45.135:3128"}
 browser = RoboBrowser(history=False, parser="lxml")
 
 def login(mail, pwd):
