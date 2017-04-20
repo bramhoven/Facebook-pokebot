@@ -27,7 +27,7 @@ def check_pokes():
 def facebook_poke(pokes):
 	for poke in pokes:
 		name = poke.find(class_="_42us").find("a").getText() 
-		amount = poke.find(class_="uiHelpLink")["data-tooltip-content"]
+		amount = poke.find(class_="_42us").find_all("div")[1].getText()
 		url = poke.find(class_="selected")["ajaxify"]
 		browser.open("https://facebook.com/" + url)
 
