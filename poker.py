@@ -100,6 +100,9 @@ def debug(msg):
     screen.addstr(24, 1, msg)
 
 def close():
+    global bot
+    global shutdownStats
+    
     if bot.isAlive():
         bot.shutdown = True
         shutdownStats = True
